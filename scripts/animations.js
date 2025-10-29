@@ -26,7 +26,7 @@ function startUpdateSeconds(elapsedTime) {
             const changedMinutes = minutes - 1;
             elements.time.minutes().textContent = formatTimeContent(changedMinutes);
             elements.time.seconds().textContent = 59;
-        } else if (parseQueryString(location.search).prep) {
+        } else if (parseQueryString(location.search)?.prep) {
             elements.time.minutes().textContent = formatTimeContent(getMinutesToSet());
         }
     }
